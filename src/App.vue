@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import { computed } from "vue";
+import {computed} from "vue";
 import Navbar from "./components/Navbar.vue";
-import { useModal } from './composables/modal'
-import FormInput from "./components/FormInput.vue";
+import {useModal} from "./composables/modal";
 
 const modal = useModal();
 
 const modalStyle = computed(() => {
   return {
-    display: modal.show.value ? 'block' : 'none',
-  }
-})
-
+    display: modal.show.value ? "block" : "none",
+  };
+});
 </script>
 
 <template>
@@ -25,7 +23,6 @@ const modalStyle = computed(() => {
   </div>
   <div class="section">
     <div class="container">
-      <FormInput name="UserName"/>
       <Navbar />
       <RouterView />
     </div>
