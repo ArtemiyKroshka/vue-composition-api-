@@ -13,6 +13,6 @@ const modal = useModal();
     </div>
   </div>
   <Teleport to="#modal">
-    Content to be rendered
+    Content to be rendered 2
   </Teleport>
 </template>
