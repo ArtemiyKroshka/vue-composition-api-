@@ -26,7 +26,6 @@ function parseHtml(markdown: string): void {
       gfm: true,
       breaks: true,
       highlight: (code) => {
-        console.log(highlightjs.highlightAuto(code).value);
         return highlightjs.highlightAuto(code).value;
       },
     },

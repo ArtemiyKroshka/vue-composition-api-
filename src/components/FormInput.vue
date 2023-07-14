@@ -28,6 +28,7 @@ function handleInput(e: Event) {
         class="input"
         :value="modelValue"
         @input="handleInput"
+        :class="{'is-danger': !status.valid}"
       />
     </div>
 
