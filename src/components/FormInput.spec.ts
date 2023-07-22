@@ -29,8 +29,21 @@ describe("FormInput", () => {
             }
           }
         })
+
+        return {
+          formValue,
+          status
+        }
       }
     })
+
+    const wrapper = mount(Parent);
+
+    expect(wrapper.find('.is-danger').text()).toBe('error');
+
+    await wrapper.find('.input').setValue('foobar');
+
+    expect(wrapper.find('.is-danger').exists).toBe(false);
   })
 
   it("render with error", () => {
